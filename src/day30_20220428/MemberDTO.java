@@ -1,5 +1,7 @@
 package day30_20220428;
 
+import java.util.Objects;
+
 public class MemberDTO {
 
 	private Long id;
@@ -80,6 +82,26 @@ public class MemberDTO {
 		return "MemberDTO [id=" + id + ", memberId=" + memberId + ", memberPassword=" + memberPassword + ", memberName="
 				+ memberName + ", memberAge=" + memberAge + ", memberMobile=" + memberMobile + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, memberAge, memberId, memberMobile, memberName, memberPassword);
+	}
+
 	
+	// equals 메서드 재정의
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MemberDTO other = (MemberDTO) obj;
+		return Objects.equals(id, other.id) && memberAge == other.memberAge && Objects.equals(memberId, other.memberId)
+				&& Objects.equals(memberMobile, other.memberMobile) && Objects.equals(memberName, other.memberName)
+				&& Objects.equals(memberPassword, other.memberPassword);
+	}
 	
 }
