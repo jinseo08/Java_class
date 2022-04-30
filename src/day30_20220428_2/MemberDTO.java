@@ -5,7 +5,6 @@ import java.util.Objects;
 public class MemberDTO {
 
 	//선생님 코드
-
 		private Long id;
 		private String memberId;
 		private String memberPassword;
