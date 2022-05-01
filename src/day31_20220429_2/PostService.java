@@ -52,7 +52,6 @@ public class PostService {
 
 	}
 
-	
 	// 글수정 조회수 처리?
 	//4. 글수정
 	public void update() {
@@ -76,8 +75,18 @@ public class PostService {
 
 	// 5. 글검색
 	// 작성자를 입력하면 입력한 작성자와 일치하는 값을 갖는 글 목록을 출력한다.
-    // ex) 작성자1 이라고 입력하면 작성자1이 작성한 글만 출력
-	// (작성자11 또는 작성자123 처럼 작성자 1이 포함된 결과는 따지지 않음)
+    // ex) 작성자1 이라고 입력하면 작성자1이 작성한 글만 출력 (작성자11 또는 작성자123 처럼 작성자 1이 포함된 결과는 따지지 않음)
+	public void search() {
+		System.out.print("작성자 : ");
+		String postWriter = scan.nextLine();
+		PostDTO post = pr.search(postWriter); 
+		if(post != null) {
+			System.out.println(post);
+		}else {
+			System.out.println("조회결과가 없습니다!");
+		}
+		
+	}
 	
 	
 	
@@ -96,6 +105,7 @@ public class PostService {
 		}
 		
 	}
+
 	
 	
 	

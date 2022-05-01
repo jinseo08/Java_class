@@ -43,11 +43,18 @@ public class PostRepository {
 	}
 
 
-
 	// 5. 글검색
 	
-	
-	
+	public PostDTO search(String postWriter) {
+		PostDTO post = null;
+		for(int i = 0; i < postList.size(); i++) {
+			if(postWriter.equals(postList.get(i).postWriter)){
+				post = postList.get(i);
+			}
+		}
+		return post;
+	}
+
 	
 	// 6. 글삭제
 	public PostDTO delete(Long id) {
@@ -59,7 +66,6 @@ public class PostRepository {
 		}
 		return post;
 	}
-	
 	
 	
 	

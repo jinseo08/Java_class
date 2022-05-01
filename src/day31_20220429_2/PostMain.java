@@ -27,9 +27,7 @@ public class PostMain {
 			}else if(input == 4) {
 				ps.update();
 			}else if(input == 5) {
-				
-
-				
+				ps.search();
 			}else if(input == 6) {
 				ps.delete();
 			}else if(input == 7) {
