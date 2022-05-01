@@ -45,11 +45,11 @@ public class PostRepository {
 
 	// 5. 글검색
 	
-	public PostDTO search(String postWriter) {
-		PostDTO post = null;
+	public PostDTO[] search(String postWriter) {
+		PostDTO[] post = new PostDTO[postList.size()];
 		for(int i = 0; i < postList.size(); i++) {
 			if(postWriter.equals(postList.get(i).postWriter)){
-				post = postList.get(i);
+				post[i] = postList.get(i);	
 			}
 		}
 		return post;
