@@ -52,7 +52,7 @@ public class PostService {
 
 	}
 
-	// 글수정 조회수 처리?
+
 	//4. 글수정
 	public void update() {
 		System.out.print("글번호 : ");

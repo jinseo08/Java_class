@@ -1,30 +1,29 @@
-package day31_20220429_2;
-
+package day31_20220429_3;
 
 public class PostDTO {
 	
+	// 선생님 코드
 	private Long id;
 	private String postTitle;
 	private String postWriter;
 	private String postPass;
 	private String postContents;
-	private int postHits;
-	private String date;
-	
-	PostDTO(){
-		
+	private int postHits = 0;
+	private String postDate;
+
+	public PostDTO() {
+
 	}
 
 	public PostDTO(Long id, String postTitle, String postWriter, String postPass, String postContents, int postHits,
-			String date) {
-		super();
+			String postDate) {
 		this.id = id;
 		this.postTitle = postTitle;
 		this.postWriter = postWriter;
 		this.postPass = postPass;
 		this.postContents = postContents;
 		this.postHits = postHits;
-		this.date = date;
+		this.postDate = postDate;
 	}
 
 	public Long getId() {
@@ -75,20 +74,19 @@ public class PostDTO {
 		this.postHits = postHits;
 	}
 
-	public String getDate() {
-		return date;
+	public String getPostDate() {
+		return postDate;
 	}
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setPostDate(String postDate) {
+		this.postDate = postDate;
 	}
 
 	@Override
 	public String toString() {
 		return "PostDTO [id=" + id + ", postTitle=" + postTitle + ", postWriter=" + postWriter + ", postPass="
-				+ postPass + ", postContents=" + postContents + ", postHits=" + postHits + ", date=" + date + "]";
+				+ postPass + ", postContents=" + postContents + ", postHits=" + postHits + ", postDate=" + postDate
+				+ "]";
 	}
-
-	
 
 }

@@ -48,7 +48,7 @@ public class PostRepository {
 	public PostDTO[] search(String postWriter) {
 		PostDTO[] post = new PostDTO[postList.size()];
 		for(int i = 0; i < postList.size(); i++) {
-			if(postWriter.equals(postList.get(i).postWriter)){
+			if(postWriter.equals(postList.get(i).getPostWriter())){
 				post[i] = postList.get(i);	
 			}
 		}
