@@ -1,18 +1,18 @@
-package day32_20220502;
+package day33_20220503t;
 
 public class BankingDTO {
 
 	private Long id;
 	private String accountNumber;
-	private int deposit;
-	private int withdraw;
+	private long deposit;
+	private long withdraw;
 	private String bankingDate;
 	
-	BankingDTO(){
+	public BankingDTO() {
 		
 	}
 	
-	public BankingDTO(Long id, String accountNumber, int deposit, int withdraw, String bankingDate) {
+	public BankingDTO(Long id, String accountNumber, long deposit, long withdraw, String bankingDate) {
 		this.id = id;
 		this.accountNumber = accountNumber;
 		this.deposit = deposit;
@@ -36,19 +36,19 @@ public class BankingDTO {
 		this.accountNumber = accountNumber;
 	}
 
-	public int getDeposit() {
+	public long getDeposit() {
 		return deposit;
 	}
 
-	public void setDeposit(int deposit) {
+	public void setDeposit(long deposit) {
 		this.deposit = deposit;
 	}
 
-	public int getWithdraw() {
+	public long getWithdraw() {
 		return withdraw;
 	}
 
-	public void setWithdraw(int withdraw) {
+	public void setWithdraw(long withdraw) {
 		this.withdraw = withdraw;
 	}
 
@@ -65,8 +65,5 @@ public class BankingDTO {
 		return "BankingDTO [id=" + id + ", accountNumber=" + accountNumber + ", deposit=" + deposit + ", withdraw="
 				+ withdraw + ", bankingDate=" + bankingDate + "]";
 	}
-	
-	
-	
 	
 }

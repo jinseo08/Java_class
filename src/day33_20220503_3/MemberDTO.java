@@ -1,6 +1,4 @@
-package day30_20220428;
-
-import java.util.Objects;
+package day33_20220503_3;
 
 public class MemberDTO {
 
@@ -11,11 +9,14 @@ public class MemberDTO {
 	private int memberAge;
 	private String memberMobile;
 	
-	public MemberDTO(){
+	MemberDTO(){
 		
 	}
 	
-	
+	MemberDTO(String memberId2, String memberPassword2){
+		
+	}
+
 	public MemberDTO(Long id, String memberId, String memberPassword, String memberName, int memberAge,
 			String memberMobile) {
 		this.id = id;
@@ -80,25 +81,4 @@ public class MemberDTO {
 				+ memberName + ", memberAge=" + memberAge + ", memberMobile=" + memberMobile + "]";
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(id, memberAge, memberId, memberMobile, memberName, memberPassword);
-	}
-
-	
-	// equals 메서드 재정의
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		MemberDTO other = (MemberDTO) obj;
-		return Objects.equals(id, other.id) && memberAge == other.memberAge && Objects.equals(memberId, other.memberId)
-				&& Objects.equals(memberMobile, other.memberMobile) && Objects.equals(memberName, other.memberName)
-				&& Objects.equals(memberPassword, other.memberPassword);
-	}
-	
 }
