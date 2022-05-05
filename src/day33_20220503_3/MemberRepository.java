@@ -9,7 +9,7 @@ public class MemberRepository {
 
 	// 회원가입
 	public void save(MemberDTO member) {
-		memberMap.put(++id, member);
+		memberMap.put(member.getId(), member);
 	}
 
 	// 로그인
